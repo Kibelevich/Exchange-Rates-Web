@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pBaoB9XyBhG8k5SKYMBWEPq0St/6NaiBiiqGza77jCqoNYKr0/ZAKxsWfM6L1Xqvs4Ni2/2Rxz5Wynsjm0vGUw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\The user\\Exchange-Rates-Web\\backend\\DAL\\DAL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\The user\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
