@@ -12,10 +12,10 @@ function App() {
 
   async function onSelectCurrency({ value }) {
     try {
-      const { data:{conversionRates} } = await axios.get(URL + value);
+      const { data:{conversionRates,baseCode} } = await axios.get(URL + value);
       setExchangeRates(Object.keys(conversionRates).map(target => ({
-        base: value,
-        target: target,
+        base: baseCode,
+        target: target.toString().toUpperCase(),
         rate: conversionRates[target]
       })))
     } catch (error) {

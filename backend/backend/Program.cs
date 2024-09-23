@@ -11,12 +11,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<CurrenciesRepo>();
-builder.Services.AddSingleton<ExchangeRatesRepo>();
+builder.Services.AddScoped<CurrenciesRepo>();
+builder.Services.AddScoped<ExchangeRatesRepo>();
 
-
-builder.Services.AddSingleton<IExchangeRateService, ExchangeRateService>();
-builder.Services.AddSingleton<ICurrencyService, CurrencyService>();
+builder.Services.AddScoped<IExchangeRateService, ExchangeRateService>();
+builder.Services.AddScoped<ICurrencyService, CurrencyService>();
 
 builder.Services.AddCors(options =>
 {
@@ -51,4 +50,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
