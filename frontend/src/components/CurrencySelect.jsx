@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import Select from 'react-select';
 
-const URL = "https://v6.exchangerate-api.com/v6/016119487a4fbe75f94a4941/latest/USD"
+const URL = "http://localhost:5231/api/Currencies"
 
 export default function CurrencySelect({ setError, onSelectCurrency }) {
   const [currencies, setCurrencies] = useState([])
 
   async function getCurrencies() {
     try {
-      const { data: { conversion_rates } } = await axios.get(URL);
-      setCurrencies(Object.keys(conversion_rates)
-        .map(key =>
-          ({ value: key, label: key })
+      const { data } = await axios.get(URL);
+      setCurrencies(data
+        .map(currency =>
+          ({ value: currency.name, label: currency.name })
         ));
     } catch (error) {
       setError(error)

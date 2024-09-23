@@ -6,7 +6,11 @@ namespace BL.Implementation;
 
 public class CurrencyService : ICurrencyService
 {
-    private readonly CurrenciesRepo currenciesRepo = new();
+    private readonly CurrenciesRepo currenciesRepo;
+    public CurrencyService(CurrenciesRepo currenciesRepo)
+    {
+        this.currenciesRepo = currenciesRepo;
+    }
     public List<Currency> GetAll()
     {
         List<Currency> currencies;

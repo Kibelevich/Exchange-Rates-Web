@@ -2,7 +2,7 @@
 
 namespace DAL.API;
 
-internal interface IExchangeRatesRepo
+public interface IExchangeRatesRepo
 {
     public ExchangeRate? Get(string baseCode);
 }

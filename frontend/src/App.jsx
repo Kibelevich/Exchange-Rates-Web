@@ -4,7 +4,7 @@ import axios from "axios";
 import CurrencySelect from './components/currencySelect';
 import RatesTable from './components/RatesTable';
 
-const URL = "https://v6.exchangerate-api.com/v6/016119487a4fbe75f94a4941/latest/"
+const URL = "http://localhost:5231/api/ExchangeRates/"
 
 function App() {
   const [error, setError] = useState('')
@@ -12,11 +12,11 @@ function App() {
 
   async function onSelectCurrency({ value }) {
     try {
-      const { data: { conversion_rates } } = await axios.get(URL + value);
-      setExchangeRates(Object.keys(conversion_rates).map(target => ({
+      const { data:{conversionRates} } = await axios.get(URL + value);
+      setExchangeRates(Object.keys(conversionRates).map(target => ({
         base: value,
         target: target,
-        rate: conversion_rates[target]
+        rate: conversionRates[target]
       })))
     } catch (error) {
       setError(error)

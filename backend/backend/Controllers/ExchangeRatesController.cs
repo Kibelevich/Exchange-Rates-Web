@@ -7,9 +7,14 @@ namespace backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ExchangeRatesController(ExchangeRateService service) : ControllerBase
+    public class ExchangeRatesController : ControllerBase
     {
-        private readonly IExchangeRateService exchangeRateService = service;
+        private readonly IExchangeRateService exchangeRateService;
+
+        public ExchangeRatesController(IExchangeRateService exchangeRateService)
+        {
+            this.exchangeRateService = exchangeRateService;
+        }
 
         // GET: api/ExchangeRates/5
         [HttpGet("{baseCode}")]

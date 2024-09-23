@@ -1,4 +1,5 @@
 ﻿using BL.API;
+using DAL.API;
 using DAL.Implementation;
 using DAL.Models;
 
@@ -7,7 +8,12 @@ namespace BL.Implementation;
 
 public class ExchangeRateService : IExchangeRateService
 {
-    private readonly ExchangeRatesRepo exchangeRatesRepo = new();
+    private readonly ExchangeRatesRepo exchangeRatesRepo;
+
+    public ExchangeRateService(ExchangeRatesRepo exchangeRatesRepo)
+    {
+        this.exchangeRatesRepo = exchangeRatesRepo;
+    }
     public ExchangeRate Get(string baseCode)
     {
         ExchangeRate? exchangeRates;

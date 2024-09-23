@@ -1,16 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DAL.Models;
 using BL.API;
-using BL.Implementation;
 
 namespace backend.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CurrenciesController(CurrencyService service) : ControllerBase
+    public class CurrenciesController : ControllerBase
     {
-        private readonly ICurrencyService currencyService = service;
-
+        private readonly ICurrencyService currencyService;
+        public CurrenciesController(ICurrencyService currencyService)
+        {
+            this.currencyService = currencyService;
+        }
         // GET: api/Currencies
         [HttpGet]
         public ActionResult<List<Currency>> GetCurrencies()

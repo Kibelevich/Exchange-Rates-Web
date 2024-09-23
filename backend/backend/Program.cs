@@ -1,3 +1,7 @@
+using BL.API;
+using BL.Implementation;
+using DAL.API;
+using DAL.Implementation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +11,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSingleton<CurrenciesRepo>();
+builder.Services.AddSingleton<ExchangeRatesRepo>();
+
+
+builder.Services.AddSingleton<IExchangeRateService, ExchangeRateService>();
+builder.Services.AddSingleton<ICurrencyService, CurrencyService>();
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CORSPolicy", builder =>
@@ -14,7 +25,7 @@ builder.Services.AddCors(options =>
         builder
         .AllowAnyMethod()
         .AllowAnyHeader()
-        .WithOrigins("http://localhost:5231");
+        .WithOrigins("http://localhost:5173");
     });
 });
 
@@ -40,3 +51,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

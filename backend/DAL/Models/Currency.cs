@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models;
 
-public class Currency(int id, string name)
+public class Currency( string name)
 {
-    public int Id { get; set; } = id;
     public string Name { get; set; } = name;
 }
