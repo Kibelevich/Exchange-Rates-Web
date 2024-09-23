@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DSMUZ5G8N0ZvktPOopJq1kZWp647q2oRdQKIs9BGqA0=",
+  "Hash": "xc42oQpLSrugOAZFxJEElTIAcqx8bw08z/YsZCqPRR8=",
   "Source": "backend",
   "BasePath": "_content/backend",
   "Mode": "Default",
@@ -47,10 +47,10 @@
       "OriginalItemSpec": "C:\\Users\\The user\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.8\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\The user\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\backend.styles.css",
+      "Identity": "C:\\Users\\The user\\Exchange-Rates-Web\\backend\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\backend.styles.css",
       "SourceId": "backend",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\The user\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\The user\\Exchange-Rates-Web\\backend\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/backend",
       "RelativePath": "backend.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\The user\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\backend.styles.css"
+      "OriginalItemSpec": "C:\\Users\\The user\\Exchange-Rates-Web\\backend\\backend\\obj\\Debug\\net8.0\\scopedcss\\bundle\\backend.styles.css"
     }
   ]
 }
